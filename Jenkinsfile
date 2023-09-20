@@ -16,6 +16,12 @@ pipeline {
                 sh '/var/lib/jenkins/apache-maven-3.9.4/bin/mvn test' 
             }
         }
+      stage('SonarQube Scan') {
+            steps {
+                // Run the SonarScanner
+                withSonarQubeEnv('Your-SonarQube-Server') {
+                    sh 'mvn sonar:sonar'
+                }
       
 
     }
