@@ -27,11 +27,10 @@ pipeline {
 
        stage('Docker build') {
             steps {
-                script {
-                  docker build -t raju .
+                 sh  'sudo docker build -t raju .'
                 }
             }
-        }
+        
       
 
 
