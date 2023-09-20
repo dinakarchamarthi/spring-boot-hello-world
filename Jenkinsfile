@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'git clone https://github.com/dinakarchamarthi/ci-cd.git'
+                git clone 'https://github.com/dinakarchamarthi/ci-cd.git'
             }
         }
     stage('Build') {
