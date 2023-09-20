@@ -6,4 +6,9 @@ pipeline {
                 git clone https://github.com/dinakarchamarthi/ci-cd.git
             }
         }
+    stage('Build') {
+            steps {
+                sh 'mvn clean package'  
+            }
+        }
     
