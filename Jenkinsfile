@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test' 
+                sh '/var/lib/jenkins/apache-maven-3.9.4/bin/mvn test' 
             }
         }
       
