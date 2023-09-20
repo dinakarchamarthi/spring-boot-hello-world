@@ -25,6 +25,16 @@ pipeline {
       }
 
 
+       stage('Docker build') {
+            steps {
+                script {
+                  docker build -t raju .
+                }
+            }
+        }
+      
+
+
 
 
     }
