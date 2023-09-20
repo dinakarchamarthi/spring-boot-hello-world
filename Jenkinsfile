@@ -11,6 +11,12 @@ pipeline {
                 sh '/var/lib/jenkins/apache-maven-3.9.4/bin/mvn clean package'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'mvn test' 
+            }
+        }
+      
 
     }
 }
