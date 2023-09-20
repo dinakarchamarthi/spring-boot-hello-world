@@ -3,12 +3,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git clone 'https://github.com/dinakarchamarthi/ci-cd.git'
+                git clone https://github.com/dinakarchamarthi/ci-cd.git
             }
         }
-    stage('Build') {
+       stage('Build') {
             steps {
                 sh 'mvn clean package'  
             }
         }
+
+    }
+}
     
