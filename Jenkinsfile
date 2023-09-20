@@ -8,7 +8,7 @@ pipeline {
         // }
        stage('Build') {
             steps {
-                sh 'mvn clean package'  
+                sh '/var/lib/jenkins/apache-maven-3.9.4/bin/mvn clean package'
             }
         }
 
