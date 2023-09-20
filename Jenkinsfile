@@ -19,7 +19,7 @@ pipeline {
       stage('SonarQube Scan') {
             steps {
                 withSonarQubeEnv('Sonarqube-8.9.10') {
-                    sh 'mvn sonar:sonar'
+                    sh '/var/lib/jenkins/apache-maven-3.9.4/bin/mvn sonar:sonar'
                 }
     }
       }
