@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git clone https://github.com/dinakarchamarthi/ci-cd.git
+                git clone https://github.com/dinakarchamarthi/spring-boot-hello-world.git
             }
         }
        stage('Build') {
