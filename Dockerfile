@@ -7,8 +7,9 @@ WORKDIR /opt
 RUN tar -zxvf apache-maven-3.9.4-bin.tar.gz && mv apache-maven-3.9.4 maven39
 WORKDIR /app/source
 RUN /opt/maven39/bin/mvn clean package
+WORKDIR /app
 # RUN mkdir /app1
-# COPY target/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar /app1/
+COPY target/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar /app/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar
 EXPOSE 8080
 CMD ["java", "-jar", "spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar"]
 
