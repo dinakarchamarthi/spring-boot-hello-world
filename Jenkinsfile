@@ -27,7 +27,7 @@ pipeline {
 
        stage('Docker build') {
             steps {
-                 sh  'sudo docker build -t raju .'
+                 sh  'sudo docker build -t pod .'
                 }
             }
         
