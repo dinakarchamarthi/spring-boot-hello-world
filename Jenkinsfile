@@ -27,7 +27,7 @@ pipeline {
 
        stage('Docker build') {
             steps {
-                 sh  'sudo docker build -t pod .'
+                 sh  'sudo docker build -t pod:$BUILD_NUMBER .'
                 }
             }
         
